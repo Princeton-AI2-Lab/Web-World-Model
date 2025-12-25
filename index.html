@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Web World Models: A middle ground where world state and physics are implemented in ordinary web code, and large language models generate context.">
+  <meta name="keywords" content="Web World Models, WWM, LLM, Agents, World Models, Web Frameworks, Generative AI">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web World Models</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'YOUR-ID-HERE');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="#">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Demos
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="#atlas">
+            Infinite Travel Atlas
+          </a>
+          <a class="navbar-item" href="#galaxy">
+            Galaxy Travel
+          </a>
+          <a class="navbar-item" href="#spire">
+            AI Spire
+          </a>
+          <a class="navbar-item" href="#alchemy">
+            AI Alchemy
+          </a>
+          <a class="navbar-item" href="#voyager">
+             Cosmic Voyager
+          </a>
+          <a class="navbar-item" href="#wwmpedia">
+             WWMPedia
+          </a>
+           <a class="navbar-item" href="#bookshelf">
+             Bookshelf
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Web World Models</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="#">Jichen Feng</a><sup>1,3</sup>*,</span>
+            <span class="author-block">
+              <a href="#">Chenggong Zhang</a><sup>2</sup>*,</span>
+            <span class="author-block">
+              <a href="#">Yifan Zhang</a><sup>1</sup>*,</span>
+            <span class="author-block">
+              <a href="#">Yifu Lu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="#">Shilong Liu</a><sup>1</sup><sup>†</sup>,</span>
+            <span class="author-block">
+              <a href="#">Mengdi Wang</a><sup>1</sup><sup>†</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Princeton University,</span>
+            <span class="author-block"><sup>2</sup>University of California, Los Angeles,</span>
+            <span class="author-block"><sup>3</sup>University of Pennsylvania</span>
+          </div>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">(* Equal contribution, † Corresponding authors)</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/Princeton-AI2-Lab/Web-World-Models"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div style="text-align: center; margin-bottom: 20px;">
+         <img src="./static/images/Teaser.jpeg" alt="Web World Models Teaser" style="max-width: 100%; height: auto;">
+      </div>
+      <h2 class="subtitle has-text-centered">
+        Illustrations of several <strong>Web World Models</strong>: from infinite travel atlases and procedural galaxies to AI-driven alchemy and rogue-like games.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        
+        <div class="item item-atlas">
+          <div class="has-text-centered box">
+             <h3 class="title is-4">Infinite Travel Atlas</h3>
+             <img src="./static/images/world-travel/demo3.png" alt="Travel Atlas Demo" style="height:300px; width:auto; object-fit: contain;">
+             <p class="subtitle is-6 mt-2">Any geographic coordinate can be expanded into rich places and stories.</p>
+          </div>
+        </div>
+        
+        <div class="item item-galaxy">
+          <div class="has-text-centered box">
+             <h3 class="title is-4">Galaxy Travel</h3>
+             <img src="./static/images/sci-fi-world-model/demo3.png" alt="Galaxy Demo" style="height:300px; width:auto; object-fit: contain;">
+             <p class="subtitle is-6 mt-2">Procedural galaxies where code governs structure and LLMs provide narrative.</p>
+          </div>
+        </div>
+
+        <div class="item item-alchemy">
+           <div class="has-text-centered box">
+             <h3 class="title is-4">AI Alchemy</h3>
+             <img src="./static/images/ai-alchemy/Alchemy.png" alt="Alchemy Demo" style="height:300px; width:auto; object-fit: contain;">
+             <p class="subtitle is-6 mt-2">A "falling sand" simulator where chemical reactions are hallucinated by Gemini.</p>
+           </div>
+        </div>
+
+        <div class="item item-spire">
+           <div class="has-text-centered box">
+             <h3 class="title is-4">AI Spire</h3>
+             <img src="./static/images/card-game/Card1.png" alt="Spire Demo" style="height:300px; width:auto; object-fit: contain;">
+             <p class="subtitle is-6 mt-2">A deck-builder where users can "Wish" for cards generated in real-time.</p>
+           </div>
+        </div>
+        
+        <div class="item item-cosmic">
+           <div class="has-text-centered box">
+             <h3 class="title is-4">Cosmic Voyager</h3>
+             <img src="./static/images/cosmic-voyager/Voyager2.png" alt="Cosmic Demo" style="height:300px; width:auto; object-fit: contain;">
+             <p class="subtitle is-6 mt-2">Interactive 3D solar system with view-dependent AI narration.</p>
+           </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Language agents increasingly require persistent worlds in which they can act, remember, and learn.
+            Existing approaches sit at two extremes: conventional web frameworks provide reliable but fixed contexts backed by databases, while fully generative world models aim for unlimited environments at the expense of controllability and practical engineering.
+          </p>
+          <p>
+            In this work, we introduce the <strong>Web World Model</strong> (WWM), a middle ground where world state and "physics" are implemented in ordinary web code, and large language models generate context, narratives, and high-level decisions on top of this structured latent state.
+          </p>
+          <p>
+            We build a suite of WWMs on a realistic web stack, including an infinite travel atlas grounded in real geography, fictional galaxy explorers, web-scale encyclopedic and narrative worlds, and simulation- and game-like environments. Across these systems, we identify practical design principles for WWMs, such as separating code-defined rules from model-driven imagination, representing latent state as typed web interfaces, and using procedural generation to achieve unlimited but structured exploration.
+            Our results suggest that web stacks themselves can serve as a scalable substrate for world models, enabling controllable yet open-ended environments for both human users and language agents.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <hr>
+        <h2 class="title is-3">The Missing Middle</h2>
+        <div class="content has-text-justified">
+           <p>
+             There is a missing middle ground between fixed-context web applications and unconstrained world models. 
+             WWMs inherit the controllability, observability, and tooling of web frameworks, yet they can procedurally expand to an effectively unlimited state space.
+           </p>
+        </div>
+        <img src="./static/images/comparison-v2.png" alt="Comparison: Web Frameworks vs World Models vs WWM" style="max-width: 80%; margin-top: 20px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Design Principles</h2>
+        <div class="content has-text-justified">
+          
+          <div class="columns is-vcentered">
+            <div class="column is-6">
+               <h4 class="title is-4">Physics vs. Imagination</h4>
+               <p>
+                 A WWM decomposes the world state into two orthogonal components:
+               </p>
+               <ul>
+                 <li><strong>Physics Layer (S<sup>φ</sup>):</strong> Defined by deterministic code. It maintains invariant state data (inventories, coordinates, caps) and enforces logical consistency.</li>
+                 <li><strong>Imagination Layer (S<sup>ψ</sup>):</strong> Stochastic and model-defined. It generates high-dimensional perceptual content, such as environmental descriptions and NPC dialogue.</li>
+               </ul>
+               <p>
+                 This decomposition ensures that code governs the "hard" constraints while the AI handles the "soft" creative layer.
+               </p>
+            </div>
+            <div class="column is-6">
+              <img src="./static/images/architecture.png" alt="WWM Architecture: Code (Physics) vs LLM (Imagination)" style="border: 1px solid #ddd; border-radius: 5px; width: 100%;">
+              <p class="is-size-7 has-text-centered"><em>The WWM Architecture separates deterministic Code Layer from stochastic AI Layer.</em></p>
+            </div>
+          </div>
+          
+          <br>
+          
+          <div class="columns is-vcentered">
+             <div class="column is-6">
+               <img src="./static/images/hashing.png" alt="Deterministic Hashing Diagram" style="border: 1px solid #ddd; border-radius: 5px; width: 100%;">
+               <p class="is-size-7 has-text-centered"><em>Deterministic Hashing: Inputs converge on coordinates to produce a frozen seed.</em></p>
+             </div>
+             <div class="column is-6">
+                <h4 class="title is-4">Infinite Worlds via Hashing</h4>
+                <p>
+                   We cannot store an infinite universe in a database. Instead, we generate it "Just-In-Time". 
+                   A coordinate is passed through a hash function to get a seed. This seed fixes the LLM's sampling randomness. 
+                   This grants <strong>Object Permanence</strong> with no storage cost: a player can leave a planet, come back later, and the planet stays the same.
+                </p>
+             </div>
+          </div>
+          
+           <h4 class="title is-4 mt-4">Typed Interfaces & Graceful Degradation</h4>
+           <p>
+             We replace opaque latent vectors with <strong>Typed Interfaces</strong> (e.g., TypeScript interfaces). 
+             The LLM predicts valid JSON objects conforming to these schemas, preventing structural hallucinations.
+             Furthermore, WWMs employ a <strong>Fidelity Slider</strong>: if the LLM is slow or unavailable, the system gracefully degrades to cached content or template-based generation, ensuring the world remains functional.
+           </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Applications & Examples</h2>
+    <p class="has-text-centered mb-6">
+        We implemented a suite of applications spanning diverse domains to demonstrate the versatility of the framework.
+    </p>
+
+    <div class="columns is-centered" id="atlas">
+      <div class="column is-full-width">
+        <h3 class="title is-4">1. Infinite Travel Atlas</h3>
+        <div class="content has-text-justified">
+          <p>
+            Inspired by Google Earth, this application allows open exploration of the real globe without a database.
+            Code infers physical attributes (continent, climate) to build semantic grounding. 
+            The LLM then operates within this structured latent space to select themes (e.g., "Desert Bloom") and generate itineraries.
+            Any geographic coordinate can be visited, with procedural beacons generated Just-In-Time.
+          </p>
+          <img src="./static/images/world-travel/WorldTravel.pdf" alt="Infinite Travel Atlas Flow" style="width: 100%; margin-top: 10px;">
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="columns is-centered" id="galaxy">
+      <div class="column is-full-width">
+        <h3 class="title is-4">2. Galaxy Travel Atlas</h3>
+        <div class="content has-text-justified">
+          <p>
+            A procedural sci-fi simulation where the entire cosmos is synthetic. 
+            <strong>Physics:</strong> Algorithms dictate galaxy layouts, star lanes, and planet clusters.
+            <strong>Imagination:</strong> The LLM textures this geometry with mission briefs and narrative hooks (e.g., "Stormglass Biomes").
+            Object permanence is achieved via hashing, ensuring that revisiting a coordinate always yields the exact same state without database lookups.
+          </p>
+           <div class="columns is-multiline is-mobile">
+            <div class="column is-half">
+              <img src="./static/images/sci-fi-world-model/GalaxyTravel.pdf" alt="Galaxy Architecture" style="border-radius: 5px;">
+            </div>
+            <div class="column is-half">
+              <img src="./static/images/sci-fi-world-model/demo3.png" alt="Galaxy Node" style="border-radius: 5px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="columns is-centered" id="spire">
+      <div class="column is-full-width">
+        <h3 class="title is-4">3. AI Spire</h3>
+        <div class="content has-text-justified">
+          <p>
+            A roguelike deck-builder separating creative generation from executable mechanics.
+            The <strong>"Wish"</strong> mechanism allows users to type a free-form prompt (e.g., "a fireball that freezes enemies").
+            The LLM translates this into valid game logic codes (JSON schema) which the symbolic engine executes.
+          </p>
+          <img src="./static/images/card-game/Card.png" alt="AI Spire Architecture" style="width: 80%; display: block; margin: 0 auto;">
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="columns is-centered" id="alchemy">
+      <div class="column is-full-width">
+        <h3 class="title is-4">4. AI Alchemy</h3>
+        <div class="content has-text-justified">
+          <p>
+            Redefining the "falling sand" genre. Traditional sandboxes rely on fixed reaction tables. 
+            Here, when unknown elements interact, the LLM decides the reaction (e.g., <code>Life + Fire = Ash</code>) and the properties of the new element.
+            An optional <strong>AI Supervisor</strong> monitors the canvas to induce emergent behavior or prevent stagnation.
+          </p>
+          <img src="./static/images/ai-alchemy/Alchemy.png" alt="Alchemy Architecture" style="width: 80%; display: block; margin: 0 auto;">
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+    <div class="columns is-centered" id="voyager">
+      <div class="column is-full-width">
+        <h3 class="title is-4">5. Cosmic Voyager</h3>
+        <div class="content has-text-justified">
+          <p>
+            A 3D solar system simulator offering orbit viewing, piloted flight, and surface walking.
+            A <strong>"Cosmic Guide"</strong> subtitle strip auto-refreshes every 30 seconds, providing context-aware AI narration based on the user's current camera view and selected body.
+          </p>
+          <img src="./static/images/cosmic-voyager/Voyager.png" alt="Cosmic Voyager Architecture" style="width: 80%; display: block; margin: 0 auto;">
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="columns is-centered" id="wwmpedia">
+      <div class="column is-full-width">
+        <h3 class="title is-4">6. WWMPedia</h3>
+        <div class="content has-text-justified">
+          <p>
+            A knowledge-centric WWM where the "world" is the open web. 
+            Instead of a static database, the agent retrieves evidence via search (Physics) and composes a structured, Wikipedia-like article (Imagination) with citations.
+            Retrieval and rendering are code-defined, while the content is synthesized on the fly.
+          </p>
+           <div class="columns is-centered">
+             <div class="column is-8">
+               <img src="./static/images/wwmpeida/WWM_superconductor.png" alt="WWMPedia Example" style="border: 1px solid #eee; width: 100%;">
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="columns is-centered" id="bookshelf">
+      <div class="column is-full-width">
+        <h3 class="title is-4">7. Bookshelf</h3>
+        <div class="content has-text-justified">
+          <p>
+             Exploring long-form generative fiction. The user controls generation through <strong>Interface Styles</strong> (visuals) and <strong>Literary Tags</strong> (genre/tone).
+             The "Physics" layer handles page chunking and state management, while the LLM streams the narrative text, ensuring consistency across page turns.
+          </p>
+          <div class="columns is-centered">
+             <div class="column is-5">
+               <img src="./static/images/bookshelf/entry.png" alt="Bookshelf Library" style="border: 1px solid #eee; width: 100%;">
+             </div>
+             <div class="column is-5">
+               <img src="./static/images/bookshelf/reader.png" alt="Bookshelf Reader" style="border: 1px solid #eee; width: 100%;">
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{wwm2025,
+  author    = {Feng, Jichen and Zhang, Chenggong and Zhang, Yifan and Lu, Yifu and Liu, Shilong and Wang, Mengdi},
+  title     = {Web World Models},
+  journal   = {arXiv},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="#">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/Princeton-AI2-Lab/Web-World-Models" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This website uses the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
