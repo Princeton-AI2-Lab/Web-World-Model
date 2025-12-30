@@ -6,7 +6,7 @@
 
 We introduce the **Web World Model (WWM)**, a middle ground where world state and physics are implemented in web code to ensure logical consistency, while large language models generate context, narratives, and high-level decisions on top of this structured latent state.
 
-**Authors**: Jichen Feng*, Yifan Zhang*, Chenggong Zhang, Yifu Lu, Shilong Liu, Mengdi Wang 
+**Authors**: Jichen Feng*, Yifan Zhang*, Chenggong Zhang*, Yifu Lu*, Shilong Liu, Mengdi Wang 
 
 [[Webpage](https://princeton-ai2-lab.github.io/Web-World-Models)] [[Huggingface](https://huggingface.co/papers/2512.23676)] 
 
